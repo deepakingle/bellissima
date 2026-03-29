@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD6E0"/>
+      <stop offset="1" stop-color="#F5E6D6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="36" fill="url(#g)"/>
+  <circle cx="240" cy="250" r="140" fill="#fff" opacity="0.25"/>
+  <circle cx="560" cy="330" r="200" fill="#fff" opacity="0.12"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700"
+        fill="#2b1f21">Ghagras</text>
+  <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600"
+        fill="#2b1f21" opacity="0.75">Festive elegance</text>
+</svg>
+
