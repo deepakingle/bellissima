@@ -2,14 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type { Product } from "@/server/db";
+import AddToCartButton from "@/components/cart/AddToCartButton";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <Link
-      href={`/product/${product.id}`}
-      className="group block rounded-3xl border border-neutral-200/70 bg-white/50 shadow-sm hover:shadow-md transition-shadow hover:-translate-y-0.5"
-    >
-      <div className="p-4 sm:p-5">
+    <div className="group rounded-3xl border border-neutral-200/70 bg-white/50 shadow-sm hover:shadow-md transition-shadow hover:-translate-y-0.5 flex flex-col">
+      <Link href={`/product/${product.id}`} className="block p-4 sm:p-5 flex-1">
         <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-neutral-200/60 bg-white/30">
           {product.imagePath ? (
             <Image
@@ -42,8 +40,11 @@ export default function ProductCard({ product }: { product: Product }) {
             </p>
           </div>
         </div>
+      </Link>
+
+      <div className="px-4 sm:px-5 pb-4 sm:pb-5">
+        <AddToCartButton product={product} />
       </div>
-    </Link>
+    </div>
   );
 }
-

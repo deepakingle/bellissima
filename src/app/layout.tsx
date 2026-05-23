@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import SiteFooter from "@/components/layout/SiteFooter";
 import SiteHeader from "@/components/layout/SiteHeader";
+import ClientProviders from "@/components/ClientProviders";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -37,11 +38,13 @@ export default function RootLayout({
           "font-[family-name:var(--font-geist-sans)]",
         ].join(" ")}
       >
-        <div className="min-h-screen flex flex-col">
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
-        </div>
+        <ClientProviders>
+          <div className="min-h-screen flex flex-col">
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+            <SiteFooter />
+          </div>
+        </ClientProviders>
       </body>
     </html>
   );
