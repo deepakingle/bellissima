@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import Container from "@/components/layout/Container";
 import ProductCard from "@/components/catalog/ProductCard";
+import AddToCartButton from "@/components/cart/AddToCartButton";
 import { getLatestProducts, getProductById } from "@/server/db";
 
 export default function ProductDetailPage({
@@ -80,19 +81,22 @@ export default function ProductDetailPage({
                   </div>
                 </div>
 
-                <div className="mt-7 flex flex-wrap gap-3">
-                  <Link
-                    href={`/${product.category}`}
-                    className="rounded-full bg-gradient-to-br from-[#FFD6E0] to-[#F7B3C2] border border-neutral-200 px-6 py-3 text-sm font-semibold text-neutral-900 hover:shadow-sm transition-shadow"
-                  >
-                    Back to {product.category}
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="rounded-full bg-white border border-neutral-200 px-6 py-3 text-sm font-semibold text-neutral-900 hover:bg-[#fff7fb] transition-colors"
-                  >
-                    Enquire Now
-                  </Link>
+                <div className="mt-7 space-y-3">
+                  <AddToCartButton product={product} />
+                  <div className="flex flex-wrap gap-3">
+                    <Link
+                      href={`/${product.category}`}
+                      className="rounded-full bg-gradient-to-br from-[#FFD6E0] to-[#F7B3C2] border border-neutral-200 px-6 py-3 text-sm font-semibold text-neutral-900 hover:shadow-sm transition-shadow"
+                    >
+                      Back to {product.category}
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="rounded-full bg-white border border-neutral-200 px-6 py-3 text-sm font-semibold text-neutral-900 hover:bg-[#fff7fb] transition-colors"
+                    >
+                      Enquire Now
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

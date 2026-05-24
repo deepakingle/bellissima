@@ -41,6 +41,22 @@ export default function ContactPage() {
                   color/style notes.
                 </p>
               </div>
+
+              <div className="mt-8 pt-6 border-t border-neutral-200/80">
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-3">
+                  Store Location
+                </h3>
+                <div className="rounded-2xl border border-neutral-200/60 bg-white/40 p-5 shadow-sm">
+                  <p className="font-semibold text-neutral-900 mb-1">
+                    Bellisima by Priyanka
+                  </p>
+                  <p className="text-sm text-neutral-700 leading-relaxed">
+                    Eastern court, BT Kawade Road,
+                    <br />
+                    Pune -411054
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="lg:col-span-7">
               <ContactForm />

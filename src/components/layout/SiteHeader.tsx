@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Container from "./Container";
+import CartIcon from "@/components/cart/CartIcon";
 
 const navItems = [
   { href: "/sarees", label: "Sarees" },
@@ -72,6 +73,8 @@ export default function SiteHeader() {
                 className="w-[220px] rounded-full border border-neutral-200/80 bg-white/70 px-4 py-2 text-sm text-neutral-900 placeholder:text-neutral-500 outline-none focus:ring-2 focus:ring-[#C9A227]/30 focus:border-[#C9A227]/50"
               />
             </form>
+
+            <CartIcon />
 
             <Link
               href="/admin/login"
